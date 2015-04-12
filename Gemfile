@@ -60,6 +60,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capybara', '2.2.0'
+  gem 'capybara-webkit'
   gem 'minitest'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false
