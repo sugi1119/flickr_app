@@ -23,13 +23,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 
 # Pagenation
-gem 'kaminari'
+# gem 'kaminari'
 
 # flicker API
-gem 'flickraw'
+gem 'flickraw', '~> 0.9.8'
 
 # Make secure secret key
 gem 'figaro'
+
+gem 'libnotify' if /linux/ =~ RUBY_PLATFORM
+gem 'growl' if /darwin/ =~ RUBY_PLATFORM
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
