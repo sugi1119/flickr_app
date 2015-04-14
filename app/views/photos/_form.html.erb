@@ -1,16 +1,13 @@
 <!-- Only for search / clear button -->
 <div>
-  <%= form_tag("photos#show", method: "get") do %>
+  <%= form_tag("/home", method: "get") do %>
     <%= text_field_tag :search %>
 
-    <%= submit_tag "Search" %>
+    <%= submit_tag "Search", :name => nil %>
 
   <% end %>
 </div>
 
 
 
-  <!-- = text_field_tag 'search', nil, :autofocus => true
-  = button_tag 'search flickr', :id => 'search_flickr'
-  = button_tag 'clear images', :id => 'clear_images'
-  = button_tag 'next page', :id => 'next_page' -->
+
