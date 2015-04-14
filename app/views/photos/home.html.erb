@@ -1,4 +1,17 @@
 <% provide(:title, 'Home') %>
 
-<h1>flickr photo search</h1>
-<%= render :partial => 'form' %>
+<h1>Welcome to flickr photo search !</h1>
+<div class="form">
+  <%= render :partial => 'form' %>
+</div>
+
+<div class="notice">
+  <%= flash[:notice] %>
+</div>
+
+<!-- <div class="search_result">
+<%# @results.each do |result| %>
+<div class="each_image"><%#=image_tag(result.thumbnail_url, :size => '75x75')%></div><br>
+<%#end%>
+<div> -->
+

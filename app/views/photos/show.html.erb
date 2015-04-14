@@ -1,2 +1,19 @@
 <%# @the_title = #{@photo.photo_name}%>
 <%# provide (title: , #{@the_title}) %>
+<div class="form">
+  <%= render :partial => 'form' %>
+</div>
+
+<div class="notice">
+  <%= flash[:notice] %>
+</div>
+
+<div class="search_result">
+<% @results.each do |result| %>
+<div class="each_image"><%=image_tag(result.thumbnail_url, :size => '75x75')%></div><br>
+<%end%>
+<div>
+
+<div id="display">
+  <%#= image_tag()%>
+</div>
