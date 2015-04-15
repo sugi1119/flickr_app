@@ -8,4 +8,11 @@ RSpec.describe "photos/home", type: :view do
       expect(rendered).to  have_selector("input[type=submit][value='Search']")
   end
 
+  # describe 'GET#home' do
+  #   it "renders the :home view" do
+  #     get :home
+  #     expect(response).to render_template :home
+  #   end
+  # end
+
 end

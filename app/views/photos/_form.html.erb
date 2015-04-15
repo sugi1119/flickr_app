@@ -1,6 +1,6 @@
 <!-- Only for search / clear button -->
 <div>
-  <%= form_tag("/home", method: "get") do %>
+  <%= form_tag search_path, method: "get" do %>
     <%= text_field_tag :search %>
 
     <%= submit_tag "Search", :name => nil %>

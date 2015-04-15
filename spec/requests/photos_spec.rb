@@ -16,6 +16,17 @@ subject{page}
       it {should have_title('Flickr Photo Search | Home')}
   end
 
+end
+  # end
+
+  # describe "Home page" do
+  #   before :each do
+  #   it "shows the search result" do
+  #     @photos = get_flickr_images(search)
+  #   end
+
+  # end
+
   # describe "Show page" do
   #   before {visit root_path}
   #   it "goes show page" do
@@ -25,4 +36,4 @@ subject{page}
   # end
 
 
-end
+

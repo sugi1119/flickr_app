@@ -15,7 +15,7 @@ module PhotosHelper
 
     @flickr_images = []
     photos.each do |photo|
-      flickr_images << Photo.new(
+      @flickr_images << Photo.new(
         id: photo["id"],
         title: photo["title"],
         description: "",
