@@ -4,6 +4,21 @@ class PhotosController < ApplicationController
 
 
   def home
+      # if @flickr_image
+      # flash[:notice]= "Please start ssssearch."
+      # end
+      # raise "eeee in home"
+      # @id = params[:id]
+      # @title = params[:title]
+      # @description = params[:description]
+      # @link_url = params[:link_url]
+      # @thumbnail_url = params[:thumbnail_url]
+      # @original_url = params[:original_url]
+
+      # flash[:notice]= "Please start search."
+
+      # flash[:notice] if @photos
+
     # if params[:search]
     #   search = params[:search]
     #   get_flickr_images(search)
@@ -13,41 +28,16 @@ class PhotosController < ApplicationController
   end
 
   def search
-    # raise 'err at search'
-    if params[:search]
+    # raise 'errrr in search'
+    if params[:search].blank?
+      flash[:notice]= "Please start search."
+    else
       search = params[:search]
       get_flickr_images(search)
-    else
-      flash[:notice]= "Please start search."
     end
-
+    # raise 'errrr in search after'
     render :home
   end
-
-  #   if @photos == nil
-  #     @search = search
-      # @photos = get_flickr_images(@search)
-
-        # flash[:notice]= "Please start search."
-      # else
-      #   @photos
-      # end
-
-
-  # end
-
-  # def search
-  #   if @photos == nil
-  #     @search = search
-  #     @photos = get_flickr_images(@search)
-  #       # flash[:notice]= "Please start search."
-  #     else
-  #       @photos
-  #     end
-
-  #     render :home
-  # end
-
 
   def show
     raise "error"

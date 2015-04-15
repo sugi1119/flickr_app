@@ -13,6 +13,8 @@ module PhotosHelper
 
     photos = flickr.photos.search(text: text, sort: "relevance", per_page: 20, page: 5)
 
+
+
     @flickr_images = []
     photos.each do |photo|
       @flickr_images << Photo.new(
