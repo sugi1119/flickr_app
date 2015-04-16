@@ -1,23 +1,100 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-body {
-  background-color: #232920;
-}
-
-h1{
-  color: #FEFFE4;
-}
-
-.search_result{
-  width: 90%;
-  border: 1px solid white;
+.container-fluid{
+  max-width:90%;
+  height: 100%;
+  border: 1px solid transparent;
   margin: 0 auto;
-  .each_image{
-    width: 76px;
-    height: 76px;
-    border: 1px solid #FEFF47;
+
+  #header{
+    max-width: 100%;
+    border: 1px solid transparent;
+
+    i {
+      border: 1px solid transparent;
+      vertical-align: middle;
+      margin-left: 0.1em;
+    }
+
+    h1{
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+      height: 100%;
+      border: 1px solid transparent;
+    }
+    .form{
+      display: inline-block;
+      vertical-align: middle;
+      width: 40%;
+      height: 100%;
+      border: 1px solid transparent;
+
+      .tag_size{
+        border:1px solid transparent;
+        height: 50%;
+        height: 100%;
+        .search {
+          display: inline-block;
+          vertical-align: middle;
+            & input{
+            height: 50%;
+            width: 100%;
+            border: 1px solid transparent;
+            padding: 0.1em;
+            font-size: 1.5em;
+            text-align: center;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            border:1px solid #fff;
+            }
+        }
+        .submit {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 0.5em;
+            & input{
+            // border:1px solid red;
+            height: 50%;
+            width: 100%;
+            padding:0.5em;
+            font-size: 1em;
+            background-color: #427EF2;
+            color: #fff;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            border:1px solid #427EF2;
+
+          }
+        }
+      }
+    }
 
   }
-}
+
+  .search_result{
+    width: 100%;
+    border: 1px solid transparent;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0.5em;
+
+      .single_image{
+      display: inline-block;
+      vertical-align:top;
+      width: 76px;
+      height: 76px;
+      border: 1px solid transparent;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+

@@ -4,27 +4,16 @@ class PhotosController < ApplicationController
 
 
   def home
-      # if @flickr_image
-      # flash[:notice]= "Please start ssssearch."
-      # end
-      # raise "eeee in home"
-      # @id = params[:id]
-      # @title = params[:title]
-      # @description = params[:description]
-      # @link_url = params[:link_url]
-      # @thumbnail_url = params[:thumbnail_url]
-      # @original_url = params[:original_url]
+    # @flickr_images
+    # # raise 'eee'
+    # if @flickr_images
 
-      # flash[:notice]= "Please start search."
 
-      # flash[:notice] if @photos
 
-    # if params[:search]
-    #   search = params[:search]
-    #   get_flickr_images(search)
-    # else
-    #   flash[:notice]= "Please start search."
-    # end
+    # @flickr_images = Photo.perform_search_and_obtain_collection(params[:id])
+
+    # @page_results = @flickr_images.paginate(params[:current_page], params[:per_page])
+  # end
   end
 
   def search

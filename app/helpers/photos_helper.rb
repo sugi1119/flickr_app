@@ -11,9 +11,7 @@ module PhotosHelper
 
     flickr = FlickRaw::Flickr.new
 
-    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 20, page: 5)
-
-
+    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 100)
 
     @flickr_images = []
     photos.each do |photo|
@@ -29,24 +27,5 @@ module PhotosHelper
 
     @flickr_images
   end
-
-# class FlickrImage
-  # def initialize(id:nil, title:nil, description:nil, link_url:nil, thumbnail_url:nil, original_url:nil)
-  #   @id = id
-  #   @title = title
-  #   @description = description
-  #   @link_url = link_url
-  #   @thumbnail_url = thumbnail_url
-  #   @original_url = original_url
-  # end
-
-  # attr_accessor :id, :title, :description, :link_url, :thumbnail_url, :original_url
-
-
-# # get_flickr_images("mountain").each do |image|
-# #   puts image.title
-# #   puts image.link_url
-# # end
-# pry "debugger"
 
 end

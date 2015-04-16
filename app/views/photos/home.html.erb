@@ -1,19 +1,21 @@
 <% provide(:title, 'Home') %>
+<div id="header">
+  <i class="fa fa-camera-retro fa-5x"></i>
+  <h1>Flickr Photo Search!</h1>
 
-<h1>Welcome to flickr photo search !</h1>
-<div class="form">
-  <%= render :partial => 'form' %>
+  <div class="form">
+    <%= render :partial => 'form' %>
+  </div>
 </div>
-
 <div class="notice">
   <%= flash[:notice] %>
 </div>
 
-
 <div class="search_result">
   <% @flickr_images.each do |image| %>
-  <div class="each_image"><%=image_tag(image.thumbnail_url, :size => '75x75')%></div><br>
+  <div class="single_image"><%=image_tag(image.thumbnail_url, :size => '75x75')%></div>
   <%end if @flickr_images%>
-
+  <%#= will_paginate @page_results %>
 <div>
+
 

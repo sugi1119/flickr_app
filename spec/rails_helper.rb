@@ -9,6 +9,7 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'rspec/active_model/mocks'
+require 'factory_girl'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'capybara/rspec'

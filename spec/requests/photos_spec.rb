@@ -12,9 +12,20 @@ subject{page}
         expect(response).to have_http_status(200)
       end
 
-      it {should have_content('flickr photo search')}
+      it {should have_content('Flickr Photo Search!')}
       it {should have_title('Flickr Photo Search | Home')}
   end
+
+  # describe "pagenation" do
+  #   before(:all){30.times{FactoryGirl.create(:photo)}}
+  #   after(:all){Photo.delete_all}
+
+  #   it "should list each photo" do
+  #     Photo.paginate(page: 20).each do |page|
+  #       expect(page).to have_selector('')
+  #     end
+  #   end
+  # end
 
 end
   # end
