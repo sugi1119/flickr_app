@@ -4,16 +4,26 @@ class PhotosController < ApplicationController
 
 
   def home
-    # @flickr_images
-    # # raise 'eee'
-    # if @flickr_images
+
+    # if params[:data]
+    #     raise 'home'
+    #   respond_to do |format|
+    #     format.json {}
+    #   end
+
+    # end
+
+  end
+
+  def limage
+    # raise 'dddd'
+    @largeImage_link = params[:data]
+    # respond_to do |format|
+    #     format.js {}
+    #   end
 
 
-
-    # @flickr_images = Photo.perform_search_and_obtain_collection(params[:id])
-
-    # @page_results = @flickr_images.paginate(params[:current_page], params[:per_page])
-  # end
+    raise 'eee needs to change format to json'
   end
 
   def search
@@ -23,14 +33,30 @@ class PhotosController < ApplicationController
     else
       search = params[:search]
       get_flickr_images(search)
+
     end
-    # raise 'errrr in search after'
+
     render :home
   end
 
+  # POST /photos
+  # POST /photos.json
+  # def create
+  #   @photo = Photo.new(photo_params)
+
+  #   respond_to do |format|
+  #     if @photo.save
+  #       format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+  #       format.json { render :show, status: :created, location: @photo }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @photo.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
   def show
     raise "error"
-
 
     # create a flickr client (get an API key from http://api.flickr.com/services/api/)
     # flickr = FlickRaw::Flickr.new
