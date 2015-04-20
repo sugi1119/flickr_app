@@ -1,6 +1,7 @@
 require 'will_paginate/collection'
 require 'will_paginate/array'
 
+=begin
 Array.class_eval do
   def paginate(page = 1, per_page = 20)
     page = 1 if page.blank?
@@ -10,3 +11,4 @@ Array.class_eval do
 
 end
 
+=end

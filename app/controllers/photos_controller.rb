@@ -1,7 +1,6 @@
 
 class PhotosController < ApplicationController
  include PhotosHelper
- # respond_to :html, :xml, :json
 
 
   def home
@@ -9,10 +8,14 @@ class PhotosController < ApplicationController
   end
 
   def limage
+    @data = params[:data]
+    @id = params[:id]
+    @title = params[:title]
+
     items = {
-      :limage_data => params[:data],
-      :limage_id => params[:id],
-      :limage_title => params[:title]
+      :limage_data => @data,
+      :limage_id => @id,
+      :limage_title => @title
     }
 
     respond_to do |format|
@@ -21,22 +24,19 @@ class PhotosController < ApplicationController
       format.json {render :json => items }
     end
 
-    # respond_with(@id)
   end
 
-
+# Search photos and arrange paginate
   def search
-    # raise 'errrr in search'
+
     if params[:search].blank?
       flash[:notice]= "Please start search."
     else
       search = params[:search]
       get_flickr_images(search)
+      @images = @flickr_images.paginate(page: params[:page], per_page: 50)
 
     end
-
-    # size = @flickr_images.count
-    # @flickr_images = Array.paginate(page: params[:page], per_page: 5)
 
     render :home
   end

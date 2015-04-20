@@ -14,31 +14,19 @@
 
 <!-- click thumbnail image and open new tab to see larger image -->
 <div class="search_result">
-  <% @flickr_images.each do |image| %>
+  <% @images.each do |image| %>
   <div class="single_image">
 
-
-    <!-- Try to send the data to contoroller -->
+    <!-- Send the data to js & contoroller -->
     <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), limage_path(:data => image.original_url, :id => image.id, :title => image.title), :remote => true %>
-
-
  </div>
-  <%end if @flickr_images%>
+  <%end if @images%>
 
 </div>
-<%# if @flickr_images %>
-<%#= will_paginate @flickr_images %>
-<%# end %>
-
-
-<div id="large"></div>
-
-
-<!-- <div class="render_large"> -->
-   <%# if @original_url %>
-      <%# render :partial =>'laimage' %>
-    <%# end %>
-  <!-- </div> -->
+<% if @images %>
+<%= will_paginate @images %>
+<% end %>
+<div class="large"></div>
 
 
 

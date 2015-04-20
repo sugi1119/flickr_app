@@ -13,13 +13,8 @@ module PhotosHelper
 
     flickr = FlickRaw::Flickr.new
 
-#     FlickRaw.configure do |config|
-#       config.pagination = :will_paginate
-#     end
+    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 500)
 
-    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 10, page: params[:page])
-
-# raise "er"
 
     @flickr_images = []
     photos.each do |photo|
@@ -33,6 +28,7 @@ module PhotosHelper
       )
     end
     @flickr_images
+
   end
 
 end
