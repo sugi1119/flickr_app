@@ -73,21 +73,50 @@
   }
 
   .search_result{
-    width: 100%;
+    width: 60%;
     border: 1px solid transparent;
-    margin: 0 auto;
     margin-top: 5px;
     padding: 0.5em;
+    display: inline-block;
+    vertical-align: top;
 
       .single_image{
       display: inline-block;
       vertical-align:top;
       width: 76px;
       height: 76px;
-      border: 1px solid transparent;
+      // border: 1px solid transparent;
       }
     }
+
+  .render_large{
+    width: 30%;
+    border: 1px solid red;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: top;
+
+    .largeformat{
+      width: 95%;
+      border:1px solid yellow;
+      padding: 0.2em;
+      margin: 0 auto;
+      text-align: center;
+
+      .larger{
+        width: 100%;
+        margin: 0 auto;
+
+      }
+
+    }
+
   }
+  #large{
+    border: 1px solid yellow;
+  }
+
+}
 
 
 

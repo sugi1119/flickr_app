@@ -1,0 +1,7 @@
+<% unless @id.nil? %>
+<div class="largeformat">
+  <h2>Title: <%= @title %></h2>
+  <h2>Photo id: <%= @id %></h2>
+  <%= image_tag @original_url, :class=>"larger" %>
+</div>
+<% end %>

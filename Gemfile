@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+gem 'responders', '~> 2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Flickr API
 gem 'flickraw', '~> 0.9.8'
 # Make secure API token
 gem 'figaro'
+
 #For pagenation
 gem 'will_paginate', '~> 3.0.5'
 gem 'bootstrap-will_paginate'

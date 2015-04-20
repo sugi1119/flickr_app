@@ -7,11 +7,19 @@ module PhotosHelper
 
   def get_flickr_images(text)
     thumbnail_size = "s" #small square 75x75
-    medium_size = "z" #medium 640, 640 on long side
+    medium_size = "m" # 240 on longest side
+
+
 
     flickr = FlickRaw::Flickr.new
 
-    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 100)
+#     FlickRaw.configure do |config|
+#       config.pagination = :will_paginate
+#     end
+
+    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 10, page: params[:page])
+
+# raise "er"
 
     @flickr_images = []
     photos.each do |photo|
@@ -24,7 +32,6 @@ module PhotosHelper
         original_url: "http://farm#{photo["farm"]}.staticflickr.com/#{photo["server"]}/#{photo["id"]}_#{photo["secret"]}_#{medium_size}.jpg"
       )
     end
-
     @flickr_images
   end
 

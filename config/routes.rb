@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get 'search' => 'photos#search'
 
-  post 'limage' => 'photos#limage'
+  get '/limage' => 'photos#limage'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
