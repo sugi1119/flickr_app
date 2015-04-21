@@ -1,7 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:700italic);
 
-
-
 body { background-color: #7A7C7D; }
 
 h1{
@@ -12,6 +10,45 @@ h1{
   text-shadow: 4px 4px 4px #2A2B2B;
 }
 
+/*Style for pagination*/
+#page_style {
+  border: 1px solid trasparent;
+}
+
+.pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  font-family: 'Fira Sans', sans-serif;}
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em; }
+  .pagination .disabled {
+    color: #aaaaaa; }
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .pagination a {
+    border: 1px solid #FFFD37;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    background: #FFFD37;
+    color: #0063dc;
+    text-decoration: none; }
+    .pagination a:hover, .pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .pagination .previous_page, .pagination .next_page {
+    border-width: 2px; }
+  .pagination .previous_page {
+    margin-right: 1em; }
+  .pagination .next_page {
+    margin-left: 1em; }
 
 
 

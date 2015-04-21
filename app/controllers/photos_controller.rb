@@ -7,21 +7,21 @@ class PhotosController < ApplicationController
 
   end
 
-  def limage
-    @data = params[:data]
-    @id = params[:id]
-    @title = params[:title]
+  def largeimage
 
-    items = {
-      :limage_data => @data,
-      :limage_id => @id,
-      :limage_title => @title
-    }
+    @id = params[:id]
+
+
+    # items = {
+    #   :limage_data => @data,
+    #   :limage_id => @id,
+    #   :limage_title => @title
+    # }
 
     respond_to do |format|
       format.html {}
-      format.js {render :json => items }
-      format.json {render :json => items }
+      format.js {render :json => @id }
+      format.json {render :json => @id }
     end
 
   end
@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
     else
       search = params[:search]
       get_flickr_images(search)
-      @images = @flickr_images.paginate(page: params[:page], per_page: 50)
+      @images = @flickr_images.paginate(page: params[:page], per_page: 20)
 
     end
 

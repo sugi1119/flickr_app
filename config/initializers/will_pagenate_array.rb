@@ -1,5 +1,6 @@
 require 'will_paginate/collection'
 require 'will_paginate/array'
+require "will_paginate-bootstrap"
 
 =begin
 Array.class_eval do

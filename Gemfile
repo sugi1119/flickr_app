@@ -13,7 +13,8 @@ gem 'figaro'
 
 #For pagenation
 gem 'will_paginate', '~> 3.0.5'
-gem 'bootstrap-will_paginate'
+gem 'will_paginate-bootstrap'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # gem 'bootstrap-sass', '~> 3.3.4'

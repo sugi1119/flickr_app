@@ -14,14 +14,28 @@
       console.log('AJAX transaction complete');
     });
  });
-});*/
+// });*/
 $(function(){
   console.log('test');
-$('div.single_image a').on('ajax:success', function(event, data, xhr, status) {
-  console.log('tesabcde');
-  console.log(data);
-  console.log(xhr);
-  console.log(status);
-  return true;
+
+  $('.single_image a').bind('ajax:success', function(event, data, status, xhr) {
+    var x = JSON.stringify(data);
+  alert(x);
+  });
 });
-});
+// $('.single_image a')
+//   .on('ajax:success', function(event, data, status, xhr) {
+//   console.log(data, status, xhr);
+// })
+//   .on('ajax:complete', function(xhr, status){
+//     console.log(xhr, status);
+//   })
+//   .on('ajax:error', function (xhr, status, error){
+//     console.log(xhr, status, error);
+//   })
+//   // console.log(data);
+//   // console.log(xhr);
+//   // console.log(status);
+//   // return true;
+// });
+
