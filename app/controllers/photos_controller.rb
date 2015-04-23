@@ -1,7 +1,7 @@
 
 class PhotosController < ApplicationController
  include PhotosHelper
-
+ respond_to :html, :xml, :json
 
   def home
 
@@ -9,19 +9,16 @@ class PhotosController < ApplicationController
 
   def largeimage
 
-    @id = params[:id]
-
-
-    # items = {
-    #   :limage_data => @data,
-    #   :limage_id => @id,
-    #   :limage_title => @title
-    # }
+    choice = {
+      :largeimageurl =>  params[:limageurl],
+      :largeimageid =>   params[:limageid],
+      :largeimagetitle =>   params[:limagetitle]
+    }
 
     respond_to do |format|
       format.html {}
-      format.js {render :json => @id }
-      format.json {render :json => @id }
+      format.js {render :json => choice }
+      format.json {render :json => choice }
     end
 
   end

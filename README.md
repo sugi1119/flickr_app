@@ -1,28 +1,30 @@
-== README
+== Flickr Photo Search App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web application uses Flickr API to allow users to search photos from Flickr. If the user clicks on a search result, they can see a larger sized image.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version: ruby 2.0.0p481
+* Rails version: rails 4.2.0
 
-* System dependencies
+* System dependencies:
+Database: Postgresql
+
+
 
 * Configuration
 
 * Database creation
 
-* Database initialization
+* Database
 
-* How to run the test suite
+* Test
+- RSPEC with Capybara, Factorygirl
+
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+-
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

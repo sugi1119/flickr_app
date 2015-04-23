@@ -18,7 +18,15 @@
   <div class="single_image">
 
     <!-- Send the data to js & contoroller -->
-    <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, :id => image.id, :remote => true %>
+    <%#= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path(limageurl: image.original_url, limageid: image.id, limagetitle: image.title), remote: :true %>
+
+      <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, data: {remote: :true, type: :json, params: {limageurl: image.original_url, limageid: image.id, limagetitle: image.title}.to_param} %>
+
+
+
+<!-- , limageid: image.id, limagetitle: image.title
+ -->
+    <%#= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, "data-params" => {limage:  image.original_url, limageid: image.id, limagetitle: image.title}, type: :json%>
     <!-- Send data jQuery-UJS way -->
     <%#= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, "data-params"=> {:limage =>  image.original_url, :limageid => image.id, :limagetitle=> image.title} %>
  </div>
@@ -33,12 +41,6 @@
 
 <div class="large"></div>
 
-<input type="text" name="name" data-remote
- data-url="ajax.php"
- data-method="post"
- data-params="foo=bar"
->
-<a href="ajax.php" data-remote>link</a>
 
 
 

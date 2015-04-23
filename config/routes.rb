@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'search' => 'photos#search'
 
-  get '/largeimage' => 'photos#largeimage'
+  get 'largeimage' => 'photos#largeimage'
 
 
 

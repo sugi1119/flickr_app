@@ -13,7 +13,7 @@ module PhotosHelper
 
     flickr = FlickRaw::Flickr.new
 
-    photos = flickr.photos.search(text: text, sort: "relevance", per_page: 500)
+    photos = flickr.photos.search(text: text, sort: "relevant", per_page: 500)
 
 
     @flickr_images = []
