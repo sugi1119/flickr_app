@@ -1,18 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:700italic);
 
-body { background-color: #7A7C7D; }
+body { background-color: #262626; }
 
 h1{
   font-family: 'Fira Sans', sans-serif;
   font-style: italic;
   font-weight: 700;
-  color: #15F9DF;
-  text-shadow: 4px 4px 4px #2A2B2B;
+  /*font-size: 1.5em;*/
+  color: #FFFDFC;
+  text-shadow: 4px 4px 4px #EB4C5D;
+}
+/*large image title, id font setting*/
+.largeimageformat{
+  font-family: 'Fira Sans', sans-serif;
+  color: #A69E90;
+  font-weight: 400;
+
 }
 
 /*Style for pagination*/
 #page_style {
-  border: 1px solid trasparent;
+  border: 1px solid transparent;
+  margin-bottom: 0.5em;
+  width: 90%
 }
 
 .pagination {
@@ -29,12 +39,13 @@ h1{
     font-weight: bold;
     color: #ff0084; }
   .pagination a {
-    border: 1px solid #FFFD37;
+    border: 1px solid #A69E90;
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
-    background: #FFFD37;
-    color: #0063dc;
+    /*background: #A69E90;*/
+    color: #A69E90;
+    /*color: #0063dc;*/
     text-decoration: none; }
     .pagination a:hover, .pagination a:focus {
       border-color: #003366;

@@ -1,5 +1,5 @@
 .container-fluid{
-  max-width:90%;
+  max-width:100%;
   height: 100%;
   border: 1px solid transparent;
   margin: 0 auto;
@@ -9,10 +9,15 @@
     border: 1px solid transparent;
 
     i {
-      border: 1px solid transparent;
+      display: inline-block;
       vertical-align: middle;
+      border:1px solid transparent;
       margin-left: 0.1em;
-    }
+
+      }
+      .fa{
+        color: #E5E4E3;
+        }
 
     h1{
       display: inline-block;
@@ -53,7 +58,6 @@
           vertical-align: middle;
           margin-left: 0.5em;
             & input{
-            // border:1px solid red;
             height: 50%;
             width: 100%;
             padding:0.5em;
@@ -80,25 +84,34 @@
     display: inline-block;
     vertical-align: top;
 
+    .image_block{
+      width: 100%;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      // padding: 1em;
+
       .single_image{
       display: inline-block;
       vertical-align:top;
       width: 76px;
       height: 76px;
-      // border: 1px solid transparent;
+      padding:0.1em;
+      margin-bottom: 0.2em;
+      border: 1px solid transparent;
       }
     }
+  }
 
   .large{
     width: 30%;
-    border: 1px solid red;
-    margin-top: 5px;
+    border: 1px solid transparent;
+    margin-top: 4em;
     display: inline-block;
     vertical-align: top;
 
     .largeformat{
       width: 95%;
-      border:1px solid yellow;
+      border:1px solid transparent;
       padding: 0.2em;
       margin: 0 auto;
       text-align: center;

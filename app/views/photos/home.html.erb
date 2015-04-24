@@ -2,32 +2,37 @@
 
 <div id="header">
   <i class="fa fa-camera-retro fa-5x"></i>
-  <h1>Flickr Photo Search!</h1>
+    <h1>Flickr Photo Search!</h1>
 
   <div class="form">
     <%= render :partial => 'form' %>
   </div>
-
-<div class="notice">
-  <%= flash[:notice] %>
 </div>
 
-<!-- click a thumbnail image and open the larger image -->
-<div class="search_result">
-  <% @images.each do |image| %>
-  <div class="single_image">
-      <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, data: {remote: :true, type: :json, params: {limageurl: image.original_url, limageid: image.id, limagetitle: image.title}.to_param} %>
- </div>
-  <%end if @images%>
+<div id="image_main">
+  <div class="search_result">
+    <!-- Pagination -->
+    <div id="page_style">
+      <% if @images %>
+        <%= will_paginate @images %>
+      <% end %>
+    </div>
+    <!-- click a thumbnail image and open the larger image -->
+    <div class="image_block">
+      <% @images.each do |image| %>
+        <div class="single_image">
+            <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, data: {remote: :true, type: :json, params: {limageurl: image.original_url, limageid: image.id, limagetitle: image.title}.to_param} %>
+        </div>
+      <%end if @images%>
+    </div>
+  </div>
+
+  <div class="large"></div>
 </div>
 
-<div id="page_style">
-  <% if @images %>
-    <%= will_paginate @images %>
-  <% end %>
-</div>
 
-<div class="large"></div>
+
+
 
 
 

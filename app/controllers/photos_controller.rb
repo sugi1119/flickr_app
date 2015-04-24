@@ -31,7 +31,7 @@ class PhotosController < ApplicationController
     else
       search = params[:search]
       get_flickr_images(search)
-      @images = @flickr_images.paginate(page: params[:page], per_page: 20)
+      @images = @flickr_images.paginate(page: params[:page], per_page: 50)
 
     end
 

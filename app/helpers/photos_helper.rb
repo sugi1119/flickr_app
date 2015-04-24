@@ -7,9 +7,9 @@ module PhotosHelper
 
   def get_flickr_images(text)
     thumbnail_size = "s" #small square 75x75
-    medium_size = "m" # 240 on longest side
-
-
+    # medium_size = "m" # 240 on longest side
+    # medium_size = "z" # 640 on longest side
+    medium_size = "n" # 300 on longest side
 
     flickr = FlickRaw::Flickr.new
 
