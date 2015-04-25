@@ -31,33 +31,33 @@ Add below for will pagenate for array.
 
 2. Frickraw
   1. In app/controllers/helpers/photos_helber.rb
-   Call flickraw and also handle flickr API keys which authenticate by Figaro
+     Call flickraw and also handle flickr API keys which authenticate by Figaro
 
-```
-require 'flickraw'
+     ```
+      require 'flickraw'
 
-FlickRaw.api_key       = ENV["API_KEY"]
-FlickRaw.shared_secret = ENV["SHARED_SECRET"]
-flickr.access_token =   ENV["ACCESS_TOKEN"]
-flickr.access_secret = ENV["ACCESS_SECRET"]
-```
+      FlickRaw.api_key       = ENV["API_KEY"]
+      FlickRaw.shared_secret = ENV["SHARED_SECRET"]
+      flickr.access_token =   ENV["ACCESS_TOKEN"]
+      flickr.access_secret = ENV["ACCESS_SECRET"]
+     ```
 
 
   2. Create new instance with FrickRaw::Flickr for users
-`flickr = FlickRaw::Flickr.new`
+    `flickr = FlickRaw::Flickr.new`
 
 
 3. Figaro
-Figaro creats application.yml which is stored API keys (access token, secret token, API key, SECRET key). Make sure the file name include in .gitignore
-```
-# Ignore application configuration
-/config/application.yml
-```
+    Figaro creats application.yml which is stored API keys (access token, secret token, API key, SECRET key). Make sure the file name include in .gitignore
+    ```
+    # Ignore application configuration
+    /config/application.yml
+    ```
 
 
 4. Model
-Create photo model with ActiveModel::Model
-In ActiveModel:: Model, it handle attributes.
+    Create photo model with ActiveModel::Model
+    In ActiveModel:: Model, it handle attributes.
 
 ## API Documentation/ References
   * [FrickRaw documentation: http://hanklords.github.io/flickraw/](http://hanklords.github.io/flickraw/)
@@ -67,9 +67,9 @@ In ActiveModel:: Model, it handle attributes.
   * [Will_paginate: https://github.com/mislav/will_paginate](https://github.com/mislav/will_paginate)
 
 ## Tests
-Using RSPEC_rails, Factory_girl_rails, and capybara 2.4.0.
-In terminal, type command bandle exec rspec
-Model test, Controller test, Route test are done.
+  * Using RSPEC_rails, Factory_girl_rails, and capybara 2.4.0.
+  * In terminal, type command bandle exec rspec
+  * Model test, Controller test, Route test are done.
 
 
 
