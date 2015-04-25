@@ -18,6 +18,12 @@ h1{
 
 }
 
+.notice{
+  font-family: 'Fira Sans', sans-serif;
+  color: #A69E90;
+  text-align: right;
+}
+
 /*Style for pagination*/
 #page_style {
   border: 1px solid transparent;

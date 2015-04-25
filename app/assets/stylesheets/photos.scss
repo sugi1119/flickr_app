@@ -31,7 +31,7 @@
       vertical-align: middle;
       width: 40%;
       height: 100%;
-      border: 1px solid transparent;
+      border: 1px solid red;
 
       .tag_size{
         border:1px solid transparent;
@@ -72,6 +72,10 @@
           }
         }
       }
+    }
+    .notice{
+      border: 1px solid red;
+
     }
 
   }

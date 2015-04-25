@@ -27,7 +27,7 @@ class PhotosController < ApplicationController
   def search
 
     if params[:search].blank?
-      flash[:notice]= "Please start search."
+      flash.now[:notice]= "Please start search."
     else
       search = params[:search]
       get_flickr_images(search)
