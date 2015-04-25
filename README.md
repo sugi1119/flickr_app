@@ -1,6 +1,7 @@
 # Flickr Photo Search App
 
 This web application uses Flickr API to allow users to search photos from Flickr. If the user clicks on a search result, they can see a larger sized image.
+[Demo](https://enigmatic-forest-5608.herokuapp.com/)
 
 ## Ruby and Rails version
 Ruby version: ruby 2.0.0
@@ -32,21 +33,23 @@ Add below for will pagenate for array.
 ..1. In app/controllers/helpers/photos_helber.rb
 Call flickraw and also handle flickr API keys which authenticate by Figaro
 
-`require 'flickraw'`
+```
+require 'flickraw'
 
-`FlickRaw.api_key       = ENV["API_KEY"]`
-`FlickRaw.shared_secret = ENV["SHARED_SECRET"]`
-`flickr.access_token =   ENV["ACCESS_TOKEN"]`
-`flickr.access_secret = ENV["ACCESS_SECRET"]`
-
+FlickRaw.api_key       = ENV["API_KEY"]
+FlickRaw.shared_secret = ENV["SHARED_SECRET"]
+flickr.access_token =   ENV["ACCESS_TOKEN"]
+flickr.access_secret = ENV["ACCESS_SECRET"]
+```
 ..2. Create new instance with FrickRaw::Flickr for users
 `flickr = FlickRaw::Flickr.new`
 
 3. Figaro
 Figaro creats application.yml which is stored API keys (access token, secret token, API key, SECRET key). Make sure the file name include in .gitignore
-`# Ignore application configuration`
-`/config/application.yml `
-
+```
+# Ignore application configuration
+/config/application.yml
+```
 4. Model
 Create photo model with ActiveModel::Model
 In ActiveModel:: Model, it handle attributes.
