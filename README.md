@@ -41,8 +41,10 @@ FlickRaw.shared_secret = ENV["SHARED_SECRET"]
 flickr.access_token =   ENV["ACCESS_TOKEN"]
 flickr.access_secret = ENV["ACCESS_SECRET"]
 ```
+
   * Create new instance with FrickRaw::Flickr for users
 `flickr = FlickRaw::Flickr.new`
+
 
 3. Figaro
 Figaro creats application.yml which is stored API keys (access token, secret token, API key, SECRET key). Make sure the file name include in .gitignore
@@ -50,6 +52,7 @@ Figaro creats application.yml which is stored API keys (access token, secret tok
 # Ignore application configuration
 /config/application.yml
 ```
+
 4. Model
 Create photo model with ActiveModel::Model
 In ActiveModel:: Model, it handle attributes.
