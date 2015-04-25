@@ -30,8 +30,8 @@ Add below for will pagenate for array.
 `require 'will_paginate/array'`
 
 2. Frickraw
-  1. In app/controllers/helpers/photos_helber.rb
-Call flickraw and also handle flickr API keys which authenticate by Figaro
+  * In app/controllers/helpers/photos_helber.rb
+   Call flickraw and also handle flickr API keys which authenticate by Figaro
 
 ```
 require 'flickraw'
@@ -41,7 +41,7 @@ FlickRaw.shared_secret = ENV["SHARED_SECRET"]
 flickr.access_token =   ENV["ACCESS_TOKEN"]
 flickr.access_secret = ENV["ACCESS_SECRET"]
 ```
-  2. Create new instance with FrickRaw::Flickr for users
+  * Create new instance with FrickRaw::Flickr for users
 `flickr = FlickRaw::Flickr.new`
 
 3. Figaro
