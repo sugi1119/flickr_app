@@ -1,12 +1,12 @@
 
 class PhotosController < ApplicationController
  include PhotosHelper
- respond_to :html, :xml, :json
 
   def home
 
   end
 
+#format for ajax
   def largeimage
 
     choice = {
@@ -27,17 +27,15 @@ class PhotosController < ApplicationController
   def search
 
     if params[:search].blank?
-      flash.now[:notice]= "Please start search."
+      flash.now[:notice]= "Please start to search."
     else
       search = params[:search]
       get_flickr_images(search)
       @images = @flickr_images.paginate(page: params[:page], per_page: 50)
-
     end
-
     render :home
-  end
 
+  end
 
 end
 

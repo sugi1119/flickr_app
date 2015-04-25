@@ -1,5 +1,8 @@
+#Search function of flickr photo
 module PhotosHelper
   require 'flickraw'
+
+  # flickr api keys
     FlickRaw.api_key       = ENV["API_KEY"]
     FlickRaw.shared_secret = ENV["SHARED_SECRET"]
     flickr.access_token =   ENV["ACCESS_TOKEN"]
@@ -7,8 +10,6 @@ module PhotosHelper
 
   def get_flickr_images(text)
     thumbnail_size = "s" #small square 75x75
-    # medium_size = "m" # 240 on longest side
-    # medium_size = "z" # 640 on longest side
     medium_size = "n" # 300 on longest side
 
     flickr = FlickRaw::Flickr.new

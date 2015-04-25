@@ -1,12 +1,13 @@
-<!-- Only for search / clear button -->
-
+<!-- Search photo-->
   <%= form_tag search_path, method: "get", :class=>"tag_size" do %>
 
     <div class="search">
-      <%= text_field_tag :search%>
+      <%= text_field_tag :search, nil, :autofocus => true, :placeholder => 'Type keyword to search'%>
     </div>
+
     <div class="submit">
     <%= submit_tag "Search", :name => nil%></div>
+
   <% end %>
 
 

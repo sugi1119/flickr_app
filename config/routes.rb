@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'photos#home'
 
-  get 'photos/show'
-
   get 'search' => 'photos#search'
 
   get 'largeimage' => 'photos#largeimage'
