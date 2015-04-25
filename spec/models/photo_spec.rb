@@ -18,9 +18,5 @@ RSpec.describe Photo, type: :model do
     it{should respond_to(:id)}
   end
 
-  # describe "model" do
-  #   it "initialize the parameters" do
-  #     expect()
-  # end
 end
 

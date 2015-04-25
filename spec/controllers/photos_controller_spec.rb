@@ -1,18 +1,16 @@
 require 'rails_helper'
 
+module PhotosHelper
+  def get_flickr_images
+  end
+end
+
+RSpec.configure {|c|c.include PhotosHelper}
+
 RSpec.describe PhotosController, type: :controller do
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:get_flickr_images) {'get search result'}
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
-
-  let(:valid_session) { {} }
-
-  # it "should have valid API key" do
-  #     api_key =
-
-  # end
+  describe "search" do
+    specify { expect(get_flickr_images).to eq 'get search result'}
+  end
 end
