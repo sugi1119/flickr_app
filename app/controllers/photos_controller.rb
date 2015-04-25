@@ -32,6 +32,7 @@ class PhotosController < ApplicationController
       search = params[:search]
       get_flickr_images(search)
       @images = @flickr_images.paginate(page: params[:page], per_page: 50)
+      flash.now[:annouce] = "Click a thumbnail image to view the larger size image."
     end
     render :home
 

@@ -19,6 +19,12 @@ h1{
 }
 
 /*flash notice */
+.announce{
+  font-family: 'Fira Sans', sans-serif;
+  color: #A69E90;
+  text-align: center;
+}
+
 .notice{
   font-family: 'Fira Sans', sans-serif;
   color: #A69E90;

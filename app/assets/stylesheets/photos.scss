@@ -1,4 +1,4 @@
-.container-fluid{
+.container{
   max-width:100%;
   height: 100%;
   border: 1px solid transparent;
@@ -73,11 +73,17 @@
         }
       }
     }
+    .announce{
+      border : 1px solid transparent;
+      width: 58%;
+      display: inline-block;
+      vertical-align: middle;
+    }
     .notice{
       border: 1px solid transparent;
       width: 40%;
-      margin-left: 60%;
-
+      display: inline-block;
+      vertical-align: middle;
     }
 
   }
