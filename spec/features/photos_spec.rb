@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "Photos", :type => :feature do
-  scenario "User click search without keyword" do
+  scenario "User click search without keyword sould get a message 'Please start to search.'" do
     visit "/"
 
     fill_in "search", :with => ""
@@ -9,4 +9,6 @@ RSpec.feature "Photos", :type => :feature do
 
     expect(page).to have_text("Please start to search.")
   end
+
 end
+
