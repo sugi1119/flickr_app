@@ -28,7 +28,13 @@ RSpec.feature "Photos", :type => :feature do
     expect(page).to have_content("← Previous 1 2 3 4 5 6 7 8 9 10 Next →")
   end
 
+  scenario "With valid keyword search, thumbnails are shown" do
 
+    fill_in "search", :with => "butterfly"
+    click_button "Search"
+
+    expect(page).to have_selector("img")
+  end
 
 
 end

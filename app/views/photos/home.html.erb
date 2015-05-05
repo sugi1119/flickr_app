@@ -26,9 +26,9 @@
     <!-- click a thumbnail image and open the larger image -->
     <div class="image_block">
       <% @images.each do |image| %>
-        <div class="single_image">
+       <div class="single_image">
             <%= link_to (image_tag(image.thumbnail_url, :size => '75x75')), largeimage_path, data: {remote: :true, type: :json, params: {limageurl: image.original_url, limageid: image.id, limagetitle: image.title}.to_param} %>
-        </div>
+       </div>
       <%end if @images%>
     </div>
   </div>
