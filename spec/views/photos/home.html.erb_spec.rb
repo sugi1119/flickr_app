@@ -8,5 +8,11 @@ RSpec.describe "photos/home", type: :view do
       expect(rendered).to  have_selector("input[type=submit][value='Search']")
   end
 
+  # it "displays images" do
+  #   @images.each do |image|
+  #     response.should have_selector("a")
+  #   end
+  #   end
 
 end
+

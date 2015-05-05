@@ -67,7 +67,7 @@ Add below for will pagenate for array.
   * [Will_paginate: https://github.com/mislav/will_paginate](https://github.com/mislav/will_paginate)
 
 ## Tests
-  * Using RSPEC_rails, Factory_girl_rails, and capybara 2.4.0.
+  * Using RSPEC_rails and capybara 2.4.0.
   * In terminal, type command bandle exec rspec
   * Model test, Controller test, Route test are done.
 
